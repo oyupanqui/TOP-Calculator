@@ -21,10 +21,27 @@ h1 {
     border: black;
     border-style: solid;
     border-radius: 20px;
-    background-color: rgb(230, 212, 212);
+    background-color: white;
+    animation-name: color-change;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color-change {
+    0% {background-color: #7A4EAB;}
+    12.5% {background-color: #4332CF;}
+    25% {background-color: #2F8FED;}
+    37.5% {background-color: #4DCF42;}
+    50% {background-color: #FAEB33;}
+    62.5% {background-color: #F19031;}
+    75% {background-color: #F2293A;}
+    87.5% {background-color: #a01ea5;}
+    100% {background-color: #7A4EAB;}
 }
 
 .screen {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border: black;
     border-style: solid;
@@ -33,6 +50,18 @@ h1 {
     width: 80%;
     height: 15%;
     margin: 20px;
+    padding: 10px;
+    transition: background-color 250ms ease-in-out, transform 150ms ease
+}
+
+.upper-line, .down-line {
+    margin: 5px;
+    padding: 0px;
+    text-align: right;
+}
+
+.down-line {
+    font-size: 24px;
 }
 
 .buttons {
@@ -46,7 +75,7 @@ h1 {
     margin: 20px;
 }
 
-.btn {
+.btn-style {
     height: 24%;
     width: 24%;
     border-radius: 20px;
@@ -54,14 +83,15 @@ h1 {
     font-size: 24px;
     border-color: black;
     border-style: solid;
+    background-color: white;
     transition: background-color 250ms ease-in-out, transform 150ms ease
 }
 
-.btn:hover {
-    background-color: rgb(223, 224, 143);
+.screen:hover, .btn-style:hover {
+    background-color: rgba(224, 224, 224, 0.877);
 }
 
-.btn:active {
+.btn-style:active {
     transform: scale(1.1)
 }
 
